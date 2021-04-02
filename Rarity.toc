@@ -123,6 +123,7 @@ Core\Statistics.lua
 Core\Tracking.lua
 
 # UI
+Core\GUI\AnchoredTrackingBar.lua
 Core\GUI\DataBrokerDisplay.lua
 
 # Addon loader
