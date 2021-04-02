@@ -84,7 +84,6 @@ end
   ]]
 -- TOOLTIP: NPCS
 
--- local colorize = Rarity.GUI.colorize
 function GUI.colorize(s, color)
 	if color and s then
 		return format("|cff%02x%02x%02x%s|r", (color.r or 1) * 255, (color.g or 1) * 255, (color.b or 1) * 255, s)
@@ -92,6 +91,7 @@ function GUI.colorize(s, color)
 		return s
 	end
 end
+local colorize = GUI.colorize
 local red = {r = 1.0, g = 0.2, b = 0.2}
 local blue = {r = 0.4, g = 0.4, b = 1.0}
 local green = {r = 0.2, g = 1.0, b = 0.2}
