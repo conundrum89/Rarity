@@ -125,6 +125,7 @@ Core\Tracking.lua
 # UI
 Core\GUI\AnchoredTrackingBar.lua
 Core\GUI\DataBrokerDisplay.lua
+Core\GUI\MainWindow.lua
 
 # Addon loader
 Core.lua
