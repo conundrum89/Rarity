@@ -139,7 +139,7 @@ local function tooltip2AddDoubleLine(value1, value2)
 	tooltip2:SetCell(lineIndex, 2, value2)
 end
 
-local colorize = GUI.colorize
+local colorize = Rarity.Utils.String.Colorize
 
 -- Local functions
 
