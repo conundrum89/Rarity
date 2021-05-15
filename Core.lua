@@ -106,7 +106,6 @@ local GetArchaeologyRaceInfo = _G.GetArchaeologyRaceInfo
 local GetStatistic = _G.GetStatistic
 local GetLootSourceInfo = _G.GetLootSourceInfo
 local GetBestMapForUnit = _G.C_Map.GetBestMapForUnit
-local GetMapInfo = _G.C_Map.GetMapInfo
 local C_Timer = _G.C_Timer
 local IsSpellKnown = _G.IsSpellKnown
 local CombatLogGetCurrentEventInfo = _G.CombatLogGetCurrentEventInfo
@@ -132,16 +131,6 @@ do
 		end
 		Rarity.Utils.PrettyPrint.Error(message, ...)
 	end
-end
-
---[[
-      HELPERS ----------------------------------------------------------------------------------------------------------------
-  ]]
--- Helper function (to look up map names more easily)
--- Returns the localized map name, or nil if the uiMapID is invalid
-local function GetMapNameByID(uiMapID)
-	local UiMapDetails = GetMapInfo(uiMapID)
-	return UiMapDetails and UiMapDetails.name or nil
 end
 
 --[[
@@ -564,6 +553,9 @@ function R:GetDistanceToItem(item)
 	end
 	return nil
 end
+
+-- Rarity API
+local GetMapNameByID = Rarity.MapInfo.GetMapNameByID
 
 -- Prepares a set of lookup tables to let us quickly determine if we're interested in various things.
 -- Many of the events we handle fire quite frequently, so speed is of the essence.

@@ -2132,7 +2132,6 @@ globals = {
 	"GetMapHierarchy",
 	"GetMapInfo",
 	"GetMapLandmarkInfo",
-	"GetMapNameByID",
 	"GetMapOverlayInfo",
 	"GetMapSubzones",
 	"GetMapZones",

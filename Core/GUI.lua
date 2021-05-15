@@ -61,15 +61,9 @@ local sort_progress = Rarity.Utils.Sorting.sort_progress
 local GetDate = Rarity.Utils.Time.GetDate
 local AuctionDB = Rarity.AuctionDB
 
--- Helper function (to look up map names more easily)
--- TODO: DRY (not sure where this fits best, move after refactoring the rest and delete any duplicates)
--- Returns the localized map name, or nil if the uiMapID is invalid
-function Rarity.GetMapNameByID(uiMapID) -- TODO doesn't really belong here
-	local UiMapDetails = GetMapInfo(uiMapID)
-	return UiMapDetails and UiMapDetails.name or nil
-end
 
-local GetMapNameByID = Rarity.GetMapNameByID
+-- Rarity API
+local GetMapNameByID = Rarity.MapInfo.GetMapNameByID
 
 --[[
       GAME TOOLTIPS ------------------------------------------------------------------------------------------------------------
