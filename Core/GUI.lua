@@ -63,10 +63,10 @@ local AuctionDB = Rarity.AuctionDB
       GAME TOOLTIPS ------------------------------------------------------------------------------------------------------------
   ]]
 -- TOOLTIP: NPCS
-function R:OutputAttempts(item, skipTimeUpdate)
+function R:OutputAttempts(item, isForcedUpdate)
 	-- TODO: Check if item entry is valid (reuse DB helper), just to be safe
 	if type(item) ~= "table" then
-		self:Error("Usage: OutputAttempts(item[, skipTimeUpdate]")
+		self:Error("Usage: OutputAttempts(item[, isForcedUpdate]")
 		return
 	end
 
@@ -93,7 +93,7 @@ function R:OutputAttempts(item, skipTimeUpdate)
 		return
 	end
 
-	if not skipTimeUpdate then
+	if not isForcedUpdate then
 		self:AddDailyAttempt(item)
 		self:AddSessionAttempt(item)
 		self:UpdateSessionAttempts(item)
